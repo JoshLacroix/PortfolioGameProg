@@ -1,0 +1,17 @@
+extends OgreState
+class_name OgreAttack
+
+@onready var ogre: CharacterBody3D
+
+func enter(_msg := {}) -> void:
+	if ogre == null:
+		ogre = get_parent().get_parent()
+		
+	$"../../AnimationPlayer".play("attack")
+	$"../../AnimationPlayer".connect("animation_finished", Callable(self, "_on_animation_finished"))
+	print("attack")
+
+func _on_animation_finished(anim_name: String) -> void:
+	if anim_name == "attack":
+		get_node("/root/World/GameManager").ogre_reached_church()
+		ogre.queue_free()
