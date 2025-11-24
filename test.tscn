@@ -1,0 +1,151 @@
+[gd_scene load_steps=6 format=3 uid="uid://b46vn6kw7a8l2"]
+
+[ext_resource type="Texture2D" uid="uid://c11n0c218yxj0" path="res://Images/BackgroungImg.png" id="1_37kl0"]
+[ext_resource type="Script" uid="uid://cd7bq7kn84txf" path="res://Scenes/portfolio.gd" id="1_ppyta"]
+[ext_resource type="Texture2D" uid="uid://bcj04g1rnr7xs" path="res://Images/PrisonImg.png" id="2_8uh7m"]
+[ext_resource type="Texture2D" uid="uid://dq33oq358eu30" path="res://Images/ParkourImg.png" id="3_6uqi0"]
+[ext_resource type="Texture2D" uid="uid://dbn7hyuqucrbf" path="res://Images/ForestImg.png" id="5_ykrsh"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ppyta")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_37kl0")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PrisonGame" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/VBoxContainer/PrisonGame"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_8uh7m")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/PrisonGame"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Title" type="Label" parent="ScrollContainer/VBoxContainer/PrisonGame/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Prison Escape Simulator"
+
+[node name="Description" type="Label" parent="ScrollContainer/VBoxContainer/PrisonGame/VBoxContainer"]
+layout_mode = 2
+text = "Escape from prison by dodgeing guards.
+ This game showcases how a game can function using
+a state machine to simulate actions for a character."
+horizontal_alignment = 1
+
+[node name="PrisonButton" type="Button" parent="ScrollContainer/VBoxContainer/PrisonGame/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Play prison Escape"
+
+[node name="NinjaGame" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/VBoxContainer/NinjaGame"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("3_6uqi0")
+stretch_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/NinjaGame"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Title" type="Label" parent="ScrollContainer/VBoxContainer/NinjaGame/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Ninja Parkour"
+
+[node name="Description" type="Label" parent="ScrollContainer/VBoxContainer/NinjaGame/VBoxContainer"]
+layout_mode = 2
+text = "As a ninja, parkous through the field.
+This game showscasesthe use of 3D assets, materials 
+and visual effects, as well as 3D physics.
+"
+horizontal_alignment = 1
+
+[node name="NinjaButton" type="Button" parent="ScrollContainer/VBoxContainer/NinjaGame/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Play Ninja Parkour"
+
+[node name="ForestGame" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/VBoxContainer/ForestGame"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("5_ykrsh")
+stretch_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/ForestGame"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Title" type="Label" parent="ScrollContainer/VBoxContainer/ForestGame/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Cabin in the Woods"
+
+[node name="Description" type="Label" parent="ScrollContainer/VBoxContainer/ForestGame/VBoxContainer"]
+layout_mode = 2
+text = "As a ninja, parkous through the field.
+This game showscasesthe use of 3D assets, materials 
+and visual effects, as well as 3D physics.
+"
+horizontal_alignment = 1
+
+[node name="ForrestButton" type="Button" parent="ScrollContainer/VBoxContainer/ForestGame/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Play Cabin in the Woods"
+
+[node name="QuitButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -45.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Quit"
+
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/PrisonGame/VBoxContainer/PrisonButton" to="." method="_on_prison_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/NinjaGame/VBoxContainer/NinjaButton" to="." method="_on_ninja_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/ForestGame/VBoxContainer/ForrestButton" to="." method="_on_forrest_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]

@@ -1,0 +1,11 @@
+Model Information:
+* title:	Cabin - Cabaña
+* source:	https://sketchfab.com/3d-models/cabin-cabana-aecdfa12d6bc4aa2b01b72fd873ffdc5
+* author:	Marianito (https://sketchfab.com/Marianito)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Cabin - Cabaña" (https://sketchfab.com/3d-models/cabin-cabana-aecdfa12d6bc4aa2b01b72fd873ffdc5) by Marianito (https://sketchfab.com/Marianito) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

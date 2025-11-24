@@ -1,0 +1,11 @@
+Model Information:
+* title:	Spotlight
+* source:	https://sketchfab.com/3d-models/spotlight-aef09725cfc5489d85f0b3cc74b4bcd5
+* author:	Demetra Great (https://sketchfab.com/demetra_great)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Spotlight" (https://sketchfab.com/3d-models/spotlight-aef09725cfc5489d85f0b3cc74b4bcd5) by Demetra Great (https://sketchfab.com/demetra_great) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

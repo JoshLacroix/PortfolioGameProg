@@ -7,23 +7,42 @@
 
 [node name="Portfolio" type="Control"]
 layout_mode = 3
-anchors_preset = 0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_pw1xn")
 
 [node name="BackgroundImage" type="TextureRect" parent="."]
-layout_mode = 0
-offset_right = 1645.0
-offset_bottom = 925.286
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.999999
+offset_top = -1.0000076
+offset_right = 493.5714
+offset_bottom = 278.14282
+grow_horizontal = 2
+grow_vertical = 2
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("1_jqypn")
+expand_mode = 2
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="QuitButton" type="Button" parent="CanvasLayer"]
-offset_left = 1036.0
-offset_top = 582.0
-offset_right = 1153.0
-offset_bottom = 645.0
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -117.0
+offset_top = -63.0
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
 text = "Quit
 "
 
@@ -92,13 +111,12 @@ texture = ExtResource("4_2s2xw")
 
 [node name="HBoxContainer" type="VBoxContainer" parent="CanvasLayer/Game2"]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
+anchor_left = 0.5
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 618.0
-offset_right = 1.0
-grow_horizontal = 2
 grow_vertical = 2
+alignment = 1
 
 [node name="Title" type="Label" parent="CanvasLayer/Game2/HBoxContainer"]
 layout_mode = 2

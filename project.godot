@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="Portfolio"
-run/main_scene="uid://drr4vbvgweb6r"
+run/main_scene="uid://b46vn6kw7a8l2"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/mode=2
 
 [input]
 
