@@ -8,10 +8,16 @@ extends CharacterBody3D
 @export var max_sight_distance: float = 20.0
 @onready var navigation_agent: NavigationAgent3D = $NavigationAgent3D
 @onready var raycast: RayCast3D = $RayCast3D
+@export var sight_angle: float = PI / 2
+@export var original_position: Vector3
+@export var original_rotation: Vector3
 
 func _ready():
 	navigation_agent.path_desired_distance = 0.5
 	navigation_agent.target_desired_distance = 0.5
+	
+	original_position = global_position
+	original_rotation = global_rotation 
 	
 	actor_setup.call_deferred()
 
@@ -34,6 +40,12 @@ func is_player_in_sight() -> bool:
 	var distance = global_position.distance_to(attack_target.global_position)
 	
 	if distance > max_sight_distance:
+		return false
+		
+	var direction_to_target = (attack_target.global_position - global_position).normalized()
+	var forward = global_transform.basis.z.normalized()
+	var dot = direction_to_target.dot(forward)
+	if dot < cos(sight_angle / 2):
 		return false
 	
 	var target_local = raycast.to_local(attack_target.global_position)

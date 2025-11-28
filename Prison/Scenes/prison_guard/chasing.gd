@@ -14,6 +14,7 @@ func enter(_msg := {}) -> void:
 
 func exit() -> void:
 	prison_guard.movement_speed = original_speed
+	navigation_agent.set_target_position(prison_guard.original_position)
 
 func update(_delta: float) -> void:
 	if not prison_guard.is_player_in_sight():

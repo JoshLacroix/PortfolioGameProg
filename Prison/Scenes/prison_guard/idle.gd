@@ -12,6 +12,19 @@ func enter(_msg := {}) -> void:
 		state_machine.transition_to("Patrolling")
 
 func update(_delta: float) -> void:
+	if not navigation_agent.is_target_reached():
+		%AnimationPlayer.play("Walk")
+	else:
+		%AnimationPlayer.play("Idle")
+		prison_guard.global_rotation = prison_guard.original_rotation
+	
 	if prison_guard.is_player_in_sight():
 		state_machine.transition_to("Chasing")
+
+func physics_update(_delta: float) -> void:
+	orient_guard()
+
+func orient_guard():
+	var velocity = prison_guard.get_velocity()
+	prison_guard.look_at(prison_guard.global_position + -velocity.normalized(), Vector3.UP)
 	

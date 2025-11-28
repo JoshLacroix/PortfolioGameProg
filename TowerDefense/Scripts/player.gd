@@ -105,7 +105,7 @@ func handle_movement(delta):
 
 	var forward := -transform.basis.z
 	var right := transform.basis.x
-	var move_dir := forward * input_vector.y + right * input_vector.x
+	var move_dir := forward * (-input_vector.y) + right * input_vector.x
 
 	if move_dir.length() > 0:
 		move_dir = move_dir.normalized() * move_speed
