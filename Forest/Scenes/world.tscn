@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://cxc8eqiutcut5"]
+[gd_scene load_steps=32 format=3 uid="uid://cxc8eqiutcut5"]
 
 [ext_resource type="Texture2D" uid="uid://bsl5vqp8lv3w4" path="res://Forest/Materials/HDR/qwantani_night_puresky_4k.exr" id="1_o06y3"]
 [ext_resource type="Texture2D" uid="uid://bw6jfm7bv2hcg" path="res://Forest/Materials/Textures/brown_mud_leaves_01_1k/textures/brown_mud_leaves_01_diff_1k.png" id="2_k7acu"]
@@ -15,6 +15,7 @@
 [ext_resource type="Script" uid="uid://bey3e8t865fvg" path="res://Forest/Scenes/performance_tracker.gd" id="12_c5t2i"]
 [ext_resource type="ArrayOccluder3D" uid="uid://cuhdfcds2ypul" path="res://Forest/Scenes/world.occ" id="14_e0ngr"]
 [ext_resource type="AudioStream" uid="uid://bnyh5gj7i010v" path="res://Forest/Materials/мистичная тема.mp3" id="14_kn0ld"]
+[ext_resource type="Script" uid="uid://bt6yrnd75jwlc" path="res://Forest/canvas_layer.gd" id="16_wccup"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_dwbse"]
 panorama = ExtResource("1_o06y3")
@@ -343,3 +344,52 @@ layout_mode = 2
 
 [node name="Label7" type="Label" parent="Control/CanvasLayer/MarginContainer/VBoxContainer"]
 layout_mode = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("16_wccup")
+
+[node name="Container" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Container"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/Container/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/font_size = 50
+text = "Paused"
+
+[node name="ReturnButton" type="Button" parent="CanvasLayer/Container/VBoxContainer"]
+process_mode = 3
+layout_mode = 2
+text = "Return"
+
+[node name="QuitButton" type="Button" parent="CanvasLayer/Container/VBoxContainer"]
+process_mode = 3
+layout_mode = 2
+text = "Quit
+"
+
+[connection signal="pressed" from="CanvasLayer/Container/VBoxContainer/ReturnButton" to="CanvasLayer" method="_on_return_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Container/VBoxContainer/QuitButton" to="CanvasLayer" method="_on_quit_button_pressed"]
