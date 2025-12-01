@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bl1ohyvd0vmih"
-path.s3tc="res://.godot/imported/leafy_grass_diff_1k.png-b9c989b4046462e7e7ce4c0a4f7fc7f1.s3tc.ctex"
+uid="uid://cmvr6wn0jwh4o"
+path.s3tc="res://.godot/imported/rock_wall_08_rough_1k.png-15c297fdf04f70d58e7bb2f1e8e70dba.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Ninja/Assets/leafy_grass_1k/textures/leafy_grass_diff_1k.png"
-dest_files=["res://.godot/imported/leafy_grass_diff_1k.png-b9c989b4046462e7e7ce4c0a4f7fc7f1.s3tc.ctex"]
+source_file="res://Ninja/Assets/rock_wall_08_1k/textures/rock_wall_08_rough_1k.png"
+dest_files=["res://.godot/imported/rock_wall_08_rough_1k.png-15c297fdf04f70d58e7bb2f1e8e70dba.s3tc.ctex"]
 
 [params]
 
