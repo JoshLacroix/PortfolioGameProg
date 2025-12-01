@@ -3,6 +3,10 @@ extends CharacterBody3D
 
 @export var SPEED = 5.0
 @export var JUMP_VELOCITY = 4.5
+const TURN_SPEED := 15.0
+
+@onready var camera = $CameraPivot/Camera3D
+@onready var visual: Node3D = $Node
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -28,13 +32,13 @@ func _physics_process(delta: float) -> void:
 	if direction:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
+		
+		var target_yaw = atan2(-direction.x, -direction.z)
+		visual.rotation.y = lerp_angle(visual.rotation.y, target_yaw, TURN_SPEED * delta)
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 	
-	#var camera_pivot = $CameraPivot
-	#rotation.y = camera_pivot.rotation.y
-
 	move_and_slide()
 	animate()
 

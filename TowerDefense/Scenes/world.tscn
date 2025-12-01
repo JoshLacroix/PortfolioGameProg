@@ -1530,6 +1530,7 @@ shape = SubResource("BoxShape3D_o2rbt")
 
 [node name="Ogre" parent="." node_paths=PackedStringArray("movement_points") instance=ExtResource("19_1cojt")]
 transform = Transform3D(-0.042191338, 0, 2.499644, 0, 2.5, 0, -2.499644, 0, -0.042191338, -19.728172, 0, 23.130966)
+visible = false
 movement_points = [NodePath("../Region1/Target"), NodePath("../Region1/Target2"), NodePath("../Region1/Target3")]
 
 [node name="Node3D" type="Node3D" parent="."]
