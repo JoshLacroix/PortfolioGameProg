@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://tbixwdptyfhl"]
+
+[ext_resource type="PackedScene" uid="uid://dbdgiemh0qx3i" path="res://Ninja/Objects/lit_torch_free_download/scene.gltf" id="1_ls5p1"]
+
+[node name="Sketchfab_Scene" instance=ExtResource("1_ls5p1")]
+
+[node name="Sketchfab_model" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0.20698814, 0.110924825, -0.021149447)

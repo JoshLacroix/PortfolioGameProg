@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://cvfpd8k5d3y1j"]
+
+[ext_resource type="PackedScene" uid="uid://btqnffjqm7spi" path="res://Ninja/Objects/twin_blades_of_the_moon/scene.gltf" id="1_44dpk"]
+
+[node name="Sketchfab_Scene" instance=ExtResource("1_44dpk")]

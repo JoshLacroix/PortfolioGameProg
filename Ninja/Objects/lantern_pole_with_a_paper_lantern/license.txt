@@ -1,0 +1,11 @@
+Model Information:
+* title:	Lantern pole with a paper lantern
+* source:	https://sketchfab.com/3d-models/lantern-pole-with-a-paper-lantern-c6f502295add42b1863bc917a864153c
+* author:	Rollauf (https://sketchfab.com/Rolfernoid)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Lantern pole with a paper lantern" (https://sketchfab.com/3d-models/lantern-pole-with-a-paper-lantern-c6f502295add42b1863bc917a864153c) by Rollauf (https://sketchfab.com/Rolfernoid) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
